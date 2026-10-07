@@ -1,0 +1,22 @@
+<form action="/new" method="get">
+    <button type="submit">Send a message!</button>
+</form>
+
+<ul>
+    <% messages.forEach((message, index)=> { %>
+        <br>
+        <li>from: <%= message.user%>
+        </li>
+        <li>On: <%= message.added.toLocaleString()%>
+        </li>
+        <br>
+        <form action="/view_messages/<%= index %>" method="get">
+
+            <button type="submit">View message</button>
+        </form>
+        <% }) %>
+
+</ul>
+<form action="/new" method="get">
+    <button type="submit">Send a message!</button>
+</form>

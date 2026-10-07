@@ -1,3 +1,11 @@
-<li><strong>From:</strong> <%= message.user%></li>
-<li><%= message.text%></li>
-<li>Added on: <%= message.added%></li>
+
+<br>
+<li><strong>From:</strong> <%= selectedMessage.user%></li>
+<li><%= selectedMessage.text%></li>
+<li>Added on: <%= selectedMessage.added.toLocaleString()%></li>
+<br>
+<form action="/" method="get">
+    <button type="submit">Back</button>
+</form>
+<br>
+
