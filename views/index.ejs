@@ -1,17 +1,19 @@
 <html>
-    <head>
-        <title><%= title%></title>
-    </head>
-    <body>
-        <h1><%= title%></h1>
-        <br>
-        <br>
-        <ul>
-            <% messages.forEach((message) => { %>
-                <br>
-                    <%-include('messages/message', {message: message}) %>
-            </br>
-                    <% }) %>
-        </ul>
-    </body>
+
+<head>
+    <title>
+        <%= title%>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title%>
+    </h1>
+
+    <br>
+    <%-include('messages/all_messages', {mesages: messages, BASE_URL: BASE_URL }) %>
+    
+</body>
+
 </html>

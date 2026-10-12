@@ -1,6 +1,6 @@
-<form action="/new" method="get">
-    <button type="submit">Send a message!</button>
-</form>
+<a href="<%= BASE_URL %>/new">
+    <button>Send a message!</button>
+</a>
 
 <ul>
     <% messages.forEach((message, index)=> { %>
@@ -10,13 +10,13 @@
         <li>On: <%= message.added.toLocaleString()%>
         </li>
         <br>
-        <form action="/view_messages/<%= index %>" method="get">
 
-            <button type="submit">View message</button>
-        </form>
+        <a href="<%= BASE_URL%>/view_messages/<%= index %>">
+            <button>View message</button>           
+        </a>
         <% }) %>
 
 </ul>
-<form action="/new" method="get">
-    <button type="submit">Send a message!</button>
-</form>
+<a href="<%= BASE_URL %>/new">
+    <button>Send a message!</button>
+</a>
